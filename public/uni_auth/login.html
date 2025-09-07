@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>University Authority Login</title>
+    <link rel="icon" href="../../assets/images/favicon.ico">
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: #f5f7fb;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            background: #fff;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .brand img {
+            height: 36px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        p.sub {
+            color: #6b7280;
+            margin: 4px 0 0;
+            font-size: 14px;
+        }
+
+        label {
+            display: block;
+            margin: 14px 0 6px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input[type=email], input[type=password] {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+
+        input:focus {
+            border-color: #0d6efd;
+            outline: none;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            background: #0d6efd;
+            color: #fff;
+            border: none;
+            padding: 12px 14px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #0b5ed7;
+        }
+
+        .error {
+            background: #fde8e8;
+            color: #b42318;
+            border: 1px solid #f3c5c5;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .muted {
+            color: #6b7280;
+            font-size: 13px;
+            margin-top: 16px;
+            text-align: center;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <?php include_once __DIR__ . '/../../includes/header.php'; ?>
+    <div class="container">
+        <div class="brand">
+            <img src="../../assets/images/logo.png" alt="Logo">
+            <div>
+                <h1>Authority Login</h1>
+                <p class="sub">Sign in with your official university email</p>
+            </div>
+        </div>
+
+        <?php if ($error): ?>
+            <div class="error"><?= htmlspecialchars($error) ?></div>
+        <?php endif; ?>
+
+        <form method="post" action="">
+            <label for="email">Official Email</label>
+            <input id="email" name="email" type="email" placeholder="name@university.ac.lk" required>
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Your password" required>
+
+            <button type="submit">Continue</button>
+        </form>
+
+        <div class="muted">
+            Your account must exist in the university authorities directory and be active.
+        </div>
+    </div>
+</body>
+</html>
