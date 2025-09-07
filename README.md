@@ -1,4 +1,4 @@
-# 🛡️ Anti-Ragging Reporting System
+<h1 align="center">🛡️ Anti-Ragging Reporting System</h1>
 
 <div align="center">
 
@@ -7,6 +7,8 @@
 [![GitHub forks](https://img.shields.io/github/forks/Samuux23/Anti-Ragging-Reporting-System.svg)](https://github.com/Samuux23/Anti-Ragging-Reporting-System/network)
 
 _A secure and anonymous online platform to report ragging incidents_
+
+🚀 **Live Website:** 👉 [https://antiragging.xyz/index.php](https://antiragging.xyz/index.php)
 
 [🚀 Quick Start](#-quick-start) • [📖 Features](#-features) • [🐛 Issues](https://github.com/Samuux23/Anti-Ragging-Reporting-System/issues)
 
